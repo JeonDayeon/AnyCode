@@ -38,6 +38,8 @@ void One_ptr()
 	int result[30];
 	int* ptr = &result[0];
 	
+	*ptr = 1;
+	printf("%d ", *ptr);
 
 	for (int num = 2; num <= 100; num++)
 	{
@@ -46,11 +48,11 @@ void One_ptr()
 			if (num % j == 0)
 				break;
 		}
-
+	
 		if (num == j)
 		{
-			result[0] = num;
-			printf("%d ", result[0]);
+			*ptr = num;
+			printf("%d ", *ptr);
 			ptr++;
 		}
 	}
