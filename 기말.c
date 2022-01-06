@@ -32,6 +32,30 @@ void One()
 	}
 }
 
+void One_ptr()
+{
+	int i = 0, j = 0;
+	int result[30];
+	int* ptr = &result[0];
+	
+
+	for (int num = 2; num <= 100; num++)
+	{
+		for (j = 2; j < num; j++)
+		{
+			if (num % j == 0)
+				break;
+		}
+
+		if (num == j)
+		{
+			result[0] = num;
+			printf("%d ", result[0]);
+			ptr++;
+		}
+	}
+}
+
 void Two()
 {
 	int num;
